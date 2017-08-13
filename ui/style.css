@@ -3,6 +3,7 @@ body {
     background-color: lightgrey;
     margin-top: 75px;
     max-width: 800px;
+    margin:0 auto;
 }
 
 .center {

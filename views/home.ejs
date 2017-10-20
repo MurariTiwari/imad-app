@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--  head of page(head) -->
+  <% include partials/head.ejs %>
+
+<!--  head of page Ends   -->  
+
+
+
+  <body>
+  <div class="container">
+  <div class="jumbotron">
+
+  
+<!--  Heading of the page (heading)  -->   
+    <% include partials/heading.ejs %>
+
+
+   <!--  Heading of the page Ends-->
+
+
+
+<!--    Carousel Start (img)   -->
+  <% include partials/img.ejs %>
+
+
+ <!--    Carousel End        -->
+ 
+
+
+ <p class="lead">
+    <button class="btn btn-primary btn-sm" onclick="fun1()" >Learn more</button>
+	<button class="btn btn-primary btn-sm" onclick="fun2()" >Log In</button>
+	<button class="btn btn-primary btn-sm" onclick="fun3()" >Register</button>
+  </p>
+  <hr/>
+  
+   <p class="lead" id="learn">
+    <p>
+
+<!-- Footer Start  (foooter)  -->
+  <% include partials/footer.ejs %>
+
+
+<!--  Footer Ends  -->
+</div>
+ </div>
+<script>var count=0,count1=0,count3=0;
+
+ 
+
+
+var str='</hr><div><form action="register" method="post"><div class="form-group" ><label for="inputAddress" class="col-form-label">Name</label><input type="text" name="name" class="form-control" id="inputAddress" placeholder="Murari Tiwari" required></div>  <div class="form-row">    <div class="form-group col-md-6">     <label for="inputEmail4" class="col-form-label">Email</label>      <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email" required>    </div>    <div class="form-group col-md-6">      <label for="inputPassword4" class="col-form-label">Password</label>      <input type="password" name=password class="form-control" id="inputPassword4" placeholder="Password" required>    </div>  </div>  <div class="form-row">   <div class="form-group col-md-6">     <label class="col-form-label">University Roll</label>     <input type="text" name="universityroll" class="form-control" id="inputEmail4" placeholder="University Roll" required>   </div>   <div class="form-group col-md-6">      <label for="inputPassword4" class="col-form-label">College Roll</label>      <input type="text" class="form-control" id="inputPassword4" placeholder="Roll"  required>   </div> </div>  <div class="form-group">    <label for="inputAddress2" class="col-form-label">Address permanent</label>    <input type="text" name="address" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required> </div> <div class="form-row">    <div class="form-group col-md-6">   <label for="inputCity" class="col-form-label">Mobile Number</label> <input type="text" name="mobileno" class="form-control" id="inputCity" required>  </div>    <div class="form-group col-md-4">  <label for="sel1">Sem</label> <select class="form-control" id="sel1" name="sem"> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> <option>6</option> <option>7</option> <option>8</option> </select>      </div>   <div class="form-group col-md-2"><label for="sel1">branch</label> <select class="form-control" id="sel1" name="branch">  <option>cse</option><option>ce</option><option>me</option><option>ece</option><option>ee</option> </select> </div> </div><div class="form-group"><div class="form-check"></div><button type="submit"  class="btn btn-primary">Register</button></form></div> </hr>';
+ function fun1()
+        {   
+		   if(count==0){
+		 document.getElementById("learn").innerHTML="<p>Cambridge Institute of Technology was established in the year 2001 at Tatisilwai (16 kms from Ranchi, the capital of Jharkhand) as a preferred centre of scientific and technical education under the able and visionary guidance of Late Dr. Bahadur Singh- An Educationist & Social Reformer. The institute has been promoted by Cambridge Trust of India, a registered body under Indian Trust Act. The Board of Governors of the trust comprises of Educationists, Technocrats, Social Workers and Philanthropists</p><p>Since its establishment, the institute has grown and flourished rapidly and is today one of the most premier engineering institutes of the country. The institute is approved by All India Council for Technical Education (AICTE) New Delhi, Government of Jharkhand and affiliated to Ranchi University, Ranchi.</p><p>Cambridge Institute of Technology has a sprawling campus and the range of hillocks provides a scenic natural surrounding which is most suited for academic environment. The building house contains Academic Block, Administrative Block, Computer Laboratories, well equipped workshops, state-of-the-art well stocked library, Conference and seminar hall and student’s amenities like Lounge, gardens and well-laid playgrounds, physical education centre and canteen. There are many small, medium and large scale industries located in the vicinity which provides opportunities for practical training and placement of students. The institute produces versatile, innovative, entrepreneurial, globally competitive engineers imbued with high ethical standards and social responsibility and has established a reputation as an institution free from the evil of ragging.</p><hr/>";
+         count=1;count1=0;count3=0;
+		 }
+		 else{
+		 count=0;
+		 document.getElementById("learn").innerHTML="";}}
+		 function fun3()
+        {   
+		   if(count3==0){
+		 document.getElementById("learn").innerHTML=str+"<hr/>";
+		 count3=1;count1=0;count2=0;
+		 }
+		 else{
+		 count3=0;
+		 document.getElementById("learn").innerHTML="";}}
+
+		 
+		  function fun2()
+        {   
+		   if(count1==0){
+		 document.getElementById("learn").innerHTML='<form action="login" method="post"> <div class="form-group">   <label for="exampleInputEmail1">Email</label><input type="email" name="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email" required></div> <div class="form-group"><label for="exampleInputPassword1">Password</label><input type="password" name="password" class="form-control" id="Password" placeholder="Password" required ></div> <div class="btn-group" data-toggle="buttons"><label class="btn btn-secondary  active"><input type="radio" name="login" value="0" id="option2" autocomplete="off"> USER <img src="https://png.icons8.com/admin-filled/ios7/25" title="Admin Filled" width="25" height="25"></label><label class="btn btn-secondary">   <input type="radio" name="login" id="option3" value="1" autocomplete="off">ADMIN<img src="https://png.icons8.com/admin-filled/ios7/25" title="Admin Filled" width="25" height="25"></label></div> <button type="submit" class="btn btn-primary btn-sm">Submit</button></form><hr/>';	
+		 count1=1;count=0;count3=0;
+		 }
+		 else{
+		 count1=0;
+		 document.getElementById("learn").innerHTML="";}}
+
+		 
+ <!-- END OF THE \\(end)  -->
+  <% include partials/end.ejs %>
+
+   <!--END OF THE PAGE--> 
+
+
+ </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--  head of page(head) -->
+  <% include partials/head.ejs %>
+
+<!--  head of page Ends   -->  
+
+
+  <body>
+    
+<div class="container">
+  
+
+ 
+<div class="jumbotron">
+<h1 align="center"><font size="52" color="#2d66f1" face="AR DESTINE"> Admin Panel</font></h1>
+   
+
+
+
+<hr/>
+
+  <a class="nav-link" href="/alogin" >Register other Admin</a>
+  
+  <hr/>
+   
+  
+
+<form action="tutorial" method="post"><div class="form-group">  <label for="sel1">Subject</label> <select class="form-control" id="sel1" name="subject">   <option>System Software</option>   <option>Data Structure and Progrmming Methodology</option>  <option>System Analysis And Design</option>  <option>Digital Circuit Design</option> <option>Data Communication</option> <option>Discrete Mathematics</option></select></div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Category</label>
+    <select class="form-control" name="Category">
+      <option>E BOOK</option>
+      <option>NOTES</option>
+      <option>PRACTICAL FILES</option>
+    </select>
+  </div>
+  <div class="form-row">    <div class="form-group col-md-8">     <label for="inputCity" class="col-form-label">Topic</label>      <input type="text" class="form-control" name="topic" id="inputCity" required>    </div>   <div class="form-group col-md-2">    <div class="form-group">  <label for="sel1">Branch</label> <select name="branch" class="form-control" id="sel1">    <option>CSE</option>  <option>ME</option>  <option>CE</option>   <option>ECE</option> <option>EeE</option>  </select></div></div>   <div class="form-group col-md-2">    <div class="form-group">   <label for="sel1">Sem</label> <select class="form-control" id="sel1" name="sem">    <option>1</option>  <option>2</option>  <option>3</option>   <option>4</option><option>5</option><option>6</option><option>7</option><option>8</option>  </select></div> </div>  </div> <label for="exampleFormControlTextarea1">Upload PDF</label><br/><input type="file" name="filetoupload" class="btn btn-light" required ><hr/><button type="submit" class="btn btn-primary">Submit</button>  <br/></form>
+</div>
+<!-- footer  -->
+  <% include partials/footer.ejs %>
+
+	 <% include partials/end.ejs %>
+
+  </body>
+</html>

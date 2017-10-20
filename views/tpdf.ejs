@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<!--  head of page(head) -->
+  <% include partials/head.ejs %>
+
+<!--  head of page Ends   -->  
+
+<body>
+<div class="container">
+<!--  Heading of the page (heading)  -->   
+    <% include partials/navbar.ejs %>
+
+
+   <!--  Heading of the page Ends-->
+ 
+
+ 
+<hr/><div class="jumbotron">
+      <h1 align="center" ><font size="62" color="#2d66f1" face="AR DESTINE">
+	PDF BOOKs </font></h1>
+    <hr/>
+    <br/> <% include partials/img1.ejs %>
+
+
+
+    	
+	 </br><br/><br/>
+
+  	  <table class="table table-hover table-sm">
+  <thead>
+    <tr class="bg-success">
+      
+      <th>Subject</th>
+      <th>Desc</th>
+      <th>PDF</th>
+ </tr>
+  </thead>
+   <tbody>
+   <%for(i in bk){%>
+<%for(j in pk){%>
+	<% if(pk[j].subject==bk[i].paper) { %>
+     <tr>
+      <td><%=pk[j].subject%></td>
+      <td><%=pk[j].description%></td>
+      <td><a href="<%=pk[j].link%>" ><img class="icon icons8-Download" width="20" height="26" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAA7UlEQVRIS+3W0RGCMAyA4Z8JHEHdQCdxBHUCRxA2cAN1Ih1BNnADvXDU47Bt0sLpC30l5GtDm1JgGydgAyx64Q/gAlRamkILAAQ5KHEClbEYC/QEZgokK1sOhV6GVUtIdNKWFU2Qt9JT6bJ38N9KtwPOxnOjhe3b9tTE+VYkvWurZVGeXwGZ9GeESjcE+0K0tpGDeRENkucpWBCxQFYsilghDVORFCiEmRAHuWvAcni738yKNPkleQok77grO3p1d45QNpR6ln8PuZ+PNXBPna4SvwJuQC3fSGp9HBnop6vcThNMmuB8ZLBuu0v5BnCwMndO7smcAAAAAElFTkSuQmCC">
+   </a></td>
+    </tr>
+	<%}%><%}%>
+	
+<%}%> </tbody>
+</table><br/><br/>
+
+   <% include  partials/bottomnav.ejs %>
+
+
+		 </div></div> 
+
+
+
+		 
+ <!-- END OF THE \\(end)  -->
+  <% include partials/end.ejs %>
+
+   <!--END OF THE PAGE--> 
+
+
+
+</body>
+</html>

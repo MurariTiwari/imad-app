@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<!--  head of page(head) -->
+  <% include partials/head.ejs %>
+
+<!--  head of page Ends   -->  
+
+<body>
+<div class="container">
+<!--  Heading of the page (heading)  -->   
+    <% include partials/navbar.ejs %>
+
+
+   <!--  Heading of the page Ends-->
+   
+   
+   
+<hr/>
+
+
+<div class="jumbotron">
+<%for(i in result){%>
+  <div class="row">
+    
+    <div class="col-12">
+	<hr/>
+	
+	
+      <h4><%=result[i].paper%></h4>
+	  <hr/></br>
+	  <h5>SYLLABUS</h5>
+	  </br>
+	<%=result[i].syllabus%>
+     </br>
+       </div> </div>
+  <hr/>
+  
+	
+	<%}%>
+   
+  
+   
+   
+
+   <% include  partials/bottomnav.ejs %>
+
+		 </div> 
+ <!-- END OF THE \\(end)  -->
+  <% include partials/end.ejs %>
+
+   <!--END OF THE PAGE--> 
+
+
+
+</body>
+</html>

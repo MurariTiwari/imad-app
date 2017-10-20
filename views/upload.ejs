@@ -1,0 +1,39 @@
+ <!DOCTYPE HTML>
+ <html>
+  <!--  head of page(head) -->
+  <% include partials/head.ejs %>
+
+  <!--  head of page Ends   -->  
+
+  <body>
+  <div class="container">
+  
+ 
+  <hr/><div class="jumbotron">
+      <h1 align="center" ><font size="62" color="#2d66f1" face="AR DESTINE">
+	upload file </font></h1>
+    <hr/>
+    <br/>
+
+<div>File to Upload : <%=filename%></div><br/><br/>
+<form allignment="center" action="fileupload" method="post" enctype="multipart/form-data">
+<input type="file" name="filetoupload" ><hr/>
+<button type="submit" class="btn btn-primary">Upload</button> 
+</form>
+<br/>
+<hr/>
+
+	</div></div> 
+
+
+
+		 
+ <!-- END OF THE \\(end)  -->
+  <% include partials/end.ejs %>
+
+   <!--END OF THE PAGE--> 
+
+
+
+  </body>
+  </html>
